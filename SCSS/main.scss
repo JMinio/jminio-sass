@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import "_vars.scss";
+@import "_galeries.scss";
+@import "_contact.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #0172AF, #74febd);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    background-color: $primaryBackColor;
+    padding: 2%;
+
+    a {
+        width: 30%;
+
+        img {
+            width: 50%;
+            margin: 5% 0 2% 5%;
+        }
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            margin-top: 5%;
+            list-style: none;
+
+            a {
+                font-size: 1em;
+                text-decoration: none;
+                color: $primaryTextColor;
+                margin-left: 15px;
+                background-image: linear-gradient(currentColor, currentColor);
+                background-position: 0% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size .3s;
+
+                &:hover {
+                    color: burlywood;
+                    font-weight: 600;
+                    background-size: 100% 2px;
+                }
+            }
+
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+        color: $primaryTextColor;
+    }
+
+    #galery {
+        
+        img {
+            width: $w-100;
+            height: $h-100;
+            object-fit: cover;
+        }
+
+        .foto-a { //CHEQUEAR ESTA RUTA 
+            grid-area: fotoA;
+        }
+
+        .foto-b {
+            grid-area: fotoB;
+        }
+
+        .foto-c {
+            grid-area: fotoC;
+        }
+
+        .foto-d {
+            grid-area: fotoD;
+        }
+
+        .foto-e {
+            grid-area: fotoE;
+        }
+
+        .foto-f {
+            grid-area: fotoF;
+        }
+    }
+
+}
+
+#galery {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 300px);
+    grid-template-areas: "fotoA" "fotoB" "fotoC" "fotoD" "fotoE" "fotoF";
+    margin: 1%;
+}
+
+//COMIENZO DEL CSS DEL INDEX.HTML
+
+.indexPresentacion{
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+
+    .left{
+
+        h1{
+            font-size: 3em;
+            font-weight: 600;
+        }
+        
+        p,h3{
+            color: $primaryTextColor;
+            padding: 5%;
+            background-color: $primaryBackColor;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+            margin: 6% 0%;
+            justify-content: center;
+
+            img{
+                width: $w-50;
+            }
+        }
+    }
+
+    .right{
+        width: $w-100;
+    }   
+
+
+}
+
+@import "_footer.scss";

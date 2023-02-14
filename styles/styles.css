@@ -6,6 +6,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+body {
+    background: linear-gradient(45deg, #0172AF, #74FEBD);
+}
+
 nav {
     height: 15vh;
     width: 100%;
@@ -53,14 +57,6 @@ nav ul li a:hover {
     background-size: 100% 2px;
 }
 
-body {
-    background: linear-gradient(45deg, #0172AF, #74FEBD);
-}
-
-main h1 {
-    color: white;
-}
-
 
 @media (min-width:460px) {
     nav {
@@ -100,25 +96,25 @@ main h1 {
         margin-right: 30px;
     }
 
-    .presentacion {
+    .indexPresentacion {
         display: flex;
         flex-direction: row;
     }
 
-    .presentacion .left {
+    .indexPresentacion .left {
         width: 50%;
     }
 
-    .presentacion .right {
+    .indexPresentacion .right {
         width: 50%;
     }
 
-    .presentacion .left h1 {
+    .indexPresentacion .left h1 {
         font-size: 5em;
         font-weight: 600;
     }
 
-    .presentacion .left p,
+    .indexPresentacion .left p,
     h3 {
         color: white;
         padding: 5%;
@@ -127,11 +123,11 @@ main h1 {
         background-color: #131313;
     }
 
-    .presentacion .left div img {
+    .indexPresentacion .left div img {
         width: 25%;
     }
 
-    .presentacion .right {
+    .indexPresentacion .right {
         padding: 7%;
     }
 }
@@ -171,7 +167,17 @@ h1 {
     margin-bottom: 5%;
 }
 
-main div img {
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main h1 {
+    color: white;
+}
+
+main #galery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -202,12 +208,13 @@ main div img {
 }
 
 #galery {
+    gap: 20px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 300px);
     grid-template-areas: "fotoA" "fotoB" "fotoC" "fotoD" "fotoE" "fotoF";
     margin: 1%;
-}
+}   
 
 @media (min-width:768px) {
 
@@ -230,7 +237,8 @@ main div img {
     }
 }
 
-.presentacion {
+/* INICIO DEL INDEX*/
+.indexPresentacion {
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,39 +248,35 @@ main div img {
     padding-bottom: 10%;
 }
 
-.presentacion .left div img {
-    width: 50%;
-}
-
-.presentacion .left {
+.indexPresentacion .left {
     margin-top: 10%;
     text-align: center;
 }
 
-.presentacion .left h1 {
+.indexPresentacion .left h1 {
     font-size: 3em;
     font-weight: 600;
 }
 
-.presentacion .left p,
+.indexPresentacion .left p,
 h3 {
     color: white;
     padding: 5%;
     background-color: #222;
 }
 
-.presentacion .left h3 {
-    color: white;
-}
-
-.presentacion .left div {
+.indexPresentacion .left div {
     display: flex;
     flex-direction: row;
-    margin: 6% 0 5% 0;
+    margin: 6% 0;
     justify-content: center;
 }
 
-.presentacion .right {
+.indexPresentacion .left div img {
+    width: 50%;
+}
+
+.indexPresentacion .right {
     width: 100%;
 }
 
@@ -282,17 +286,17 @@ h3 {
         font-size: 4em;
     }
 
-    .presentacion {
+    .indexPresentacion {
         flex-direction: row;
     }
 
-    .presentacion .left {
+    .indexPresentacion .left {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .presentacion .left .iconos-de-redes img {
+    .indexPresentacion .left .iconos-de-redes img {
         width: 20%;
     }
 
